@@ -1,0 +1,41 @@
+Estoy trabajando con el repo: lucasarenas01/Proyectos-mql5.
+
+Arquitectura (Framework v4.0):
+1) El EA principal (.mq5) está en:
+   Experts/Framework v4.0/Portfolio Master EA MA/Portfolio Master EA MA_v4.0.mq5
+
+2) Cadena de ejecución:
+   Portfolio EA (.mq5) -> MS_Expert (.mqh) -> Expert strategy (.mqh)
+   Concretamente:
+   - Portfolio Master EA MA_v4.0.mq5 incluye:
+     ../Framework.mqh
+     ../MS_Expert/MS_Expert_MA.mqh
+     Portfolio Master EA MA_Inputs.mqh
+
+   - MS_Expert_MA.mqh instancia múltiples CExpertoMA (1 por símbolo) usando CMultisimbolo.
+
+   - Expert_MA.mqh implementa CExpertoMA (estrategia por símbolo).
+
+3) Hay 2 Framework.mqh:
+   - Experts/Framework v4.0/Framework.mqh (puente) incluye:
+     <Master Framework v4.0\Framework.mqh>
+   - Include/Master Framework v4.0/Framework.mqh (agregador) incluye:
+     Enums.mqh, Barra.mqh, Gestion Posiciones v2.mqh, Indicadores v3.mqh,
+     Multisimbolo.mqh, Gestion de Riesgo v2.mqh, Trade v2.mqh, Time.mqh.
+
+Objetivo de esta conversación:
+[Escribe aquí qué quieres cambiar/crear/depurar]
+
+Prompt (corto y robusto)
+
+Repo: lucasarenas01/Proyectos-mql5.
+Antes de responder, leé readme.md y INSTRUCCIONES.md (en la raíz del repo) y usalos como fuente de verdad.
+Si algo de mi pregunta contradice esos documentos, decímelo y proponé la corrección.
+Objetivo: [escribe aquí tu objetivo].
+Archivos relevantes: [rutas si aplica].
+
+Si querés que sea aún más “a prueba de fallos” (por si vuelve a aparecer README.md y readme.md a la vez), usa este:
+
+Repo: lucasarenas01/Proyectos-mql5.
+Antes de responder, leé el/los archivos de documentación en la raíz: README.md y/o readme.md, y INSTRUCCIONES.md, y usalos como fuente de verdad.
+Objetivo: [...].

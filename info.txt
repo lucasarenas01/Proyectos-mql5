@@ -1,0 +1,8 @@
+# 1. Prepara todos los cambios que has hecho (mover archivos)
+git add .
+
+# 2. Ponle un nombre a este grupo de cambios
+git commit -m "Organizando archivos en carpetas"
+
+# 3. Envíalo a la web de GitHub
+git push
